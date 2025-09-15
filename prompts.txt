@@ -1,0 +1,149 @@
+Baue eine persönliche, inspirierende Website für Monika Hauer (Jg. 1966). Thema: Pilgern & Tagebücher. Ziel: ihre Wege erzählen, Tagebücher vorstellen & verkaufen (extern oder direkt auf der Seite), Kontakt ermöglichen.
+
+Seitenstruktur
+
+Hero: großes, ruhiges Foto (oder kurzer Video-Loop).
+Headline: „Mein Weg – Von Wien nach Santiago & weiter“
+Subline: „Pilgerin. Autorin.“
+CTA: „Zu den Büchern“
+
+Über mich (Text unten einfügen).
+
+Meine Wege (Timeline mit Karten-Skizzen, Jahre anklickbar; Texte unten).
+
+Tagebücher (Grid mit Covern, Kurzbeschreibung, Buttons „Jetzt kaufen“ + optional „Direkt bestellen“).
+
+Galerie (Lightbox, auch Handschrift-Scans).
+
+Kontakt (Formular + E-Mail), optional Newsletter.
+
+Footer: Impressum, Datenschutz.
+
+Technik & Qualität
+
+Stack: Next.js + Tailwind CSS, responsive, barrierearm.
+
+SEO/OG fertig, strukturierte Daten: Person, Book, BreadcrumbList.
+
+Bilder: responsive srcset, Lazy-Loading, LQIP/Blur.
+
+DSGVO: keine externen Fonts/Tracker; Impressum/Datenschutz-Seiten inkludiert.
+
+Shop-Option:
+
+a) Externe Links (Amazon/Thalia) und/oder
+
+b) Direktkauf via Stripe Checkout (physischer Versand) – einfacher Bestellflow.
+
+Deployment-ready (Vercel), README.md mit Hinweisen zum Ersetzen der Platzhalter.
+
+Extras (gern prominent)
+
+Interaktive Karte mit Pins je Etappe; Klick öffnet Mini-Eintrag.
+
+Zitat-Slider mit Tagebuchzeilen.
+
+Audio-Lesung (Monika liest 60–90 Sek. Auszug; audio.mp3).
+
+Pilger-Playlist (optional Link).
+
+Blog optional für neue Wege.
+
+Platzhalter
+
+E-Mail: [kontakt@monika-hauer.at]
+
+Buch-Links extern: [amazon.de/buch1], [thalia.at/buch1] (pro Buch konfigurierbar)
+
+Direktbestellung: Stripe Checkout (Platzhalter-Produkt(e))
+
+Medien: hero.jpg, map.jpg, buch1-cover.jpg, weg1.jpg…wegN.jpg, audio.mp3
+
+Design
+
+Editorial, ruhig: Serif für Headlines, Sans für Fließtext.
+
+Naturtöne (grün/beige/erde), viel Weißraum, dezente Fades/Hovers.
+
+Inhalte – direkt einfügen
+„Über mich“ (finaler Textvorschlag)
+
+„Ich heiße Monika Hauer (Jahrgang 1966). Im Jahr 2015 war ich bei meinen Kindern in Wien zu Besuch. Gemeinsam mit meinem Sohn Christian kaufte ich Zelt und Rucksack – und ging los. Eigentlich wollte ich nur bis Oberndorf wandern.
+Dort sah ich die ersten Jakobsweg-Wegweiser – und folgte ihnen weiter. Aus dem spontanen Plan wurde eine große Reise: rund 3.000 Kilometer in vier Monaten bis nach Santiago de Compostela.
+Seitdem gehört das Pilgern zu meinem Leben. Schritt für Schritt bin ich weitergegangen: von Oberndorf nach Triest, von Triest nach Assisi, weiter nach Rom und schließlich bis Palinuro.
+Meine Erlebnisse habe ich in Tagebüchern festgehalten und als Taschenbücher veröffentlicht – als Einladung, mitzugehen: im eigenen Tempo, mit leichtem Gepäck und offenem Herzen.“
+
+Timeline – Beispieltexte (Platzhalter, später anpassbar)
+
+2015 – Wien → Santiago de Compostela
+
+Spontaner Aufbruch nach Besuch bei den Kindern in Wien
+
+Ausrüstung vor Ort gekauft (Zelt, Rucksack)
+
+Geplanter Zielort Oberndorf – unterwegs dem Jakobsweg gefolgt
+
+≈ 3.000 km in 4 Monaten
+
+Erfahrung: Einfachheit, Begegnungen, Vertrauen – Ankommen im eigenen Rhythmus
+
+2022 – Oberndorf → Triest
+
+Erste „Weitergehen“-Etappe Richtung Italien
+
+Über Berge und Täler, Ankunft mit Blick auf die Adria
+
+Notiz: neue Wegfreundschaften, viel Stille
+
+2023 – Triest → Assisi
+
+Durch Venetien, Toskana, Umbrien
+
+Assisi als geistiger Fixpunkt (Franziskus)
+
+2024 – Assisi → Rom
+
+Pilgerweg ins Herz Italiens
+
+Ankunft am Petersplatz – stilles, intensives Zielgefühl
+
+2025 – Rom → Palinuro
+
+Weiter bis an die tyrrhenische Küste Süditaliens
+
+Meer als neuer Horizont und Abschluss einer langen Linie
+
+Bücher – Modulbeschreibung (für den Coder)
+
+Jedes Buch als Karte: Cover, Titel, Kurzbeschreibung (2–3 Sätze), Buttons:
+
+„Jetzt kaufen“ (externer Link konfigurierbar je Händler)
+
+„Direkt bestellen“ (Stripe Checkout, SKU/Preis konfigurierbar)
+
+Optional: Leseprobe-PDF, 3–4 Zitate als Akkordeon.
+
+Beispiel-Einträge (Platzhalter):
+
+[Buchtitel 1] – Wien nach Santiago
+Kurztext: „Vier Monate, eine Entscheidung: vom ersten Schritt vor der Haustür bis zur Muschel von Santiago.“
+Buttons: „Jetzt kaufen (Amazon)“ · „Direkt bestellen“
+
+[Buchtitel 2] – Italienische Etappen
+Kurztext: „Über Triest, Assisi und Rom bis ans Meer – Wege der Stille, der Menschen und der kleinen Wunder.“
+Buttons: „Jetzt kaufen (Thalia)“ · „Direkt bestellen“
+
+Kontakt & Newsletter
+
+Formular: Name, E-Mail, Nachricht → E-Mail an Betreiber + Danke-Seite.
+
+Optional Newsletter: DSGVO-konform (Double-Opt-In, lokal gespeichert oder Provider-Hook).
+
+Lieferumfang
+
+Vollständiger Code, README.md, Impressum/Datenschutz, Dummy-Medien, SEO/OG fertig, Stripe-Placeholder, Deploy-Anleitung.
+please adjust the text to following:
+
+Ich bin Monika Hauer. 2015 war ich bei meinen Kindern in Wien zu Besuch. Gemeinsam mit meinem Sohn Christian kaufte ich Zelt und Rucksack – und ging einfach los. Geplantes Ziel war Oberndorf an der Melk. Dann sah ich die Jakobsweg-Pfeile, folgte ihnen – und stand vier Monate und rund 3.000 Kilometer später in Santiago de Compostela.
+Seitdem lässt mich das Gehen nicht los. Schritt für Schritt bin ich weitergezogen: Oberndorf–Triest, Triest–Assisi, Assisi–Rom und schließlich Rom–Palinuro. 
+Meine Erlebnisse habe ich in Tagebüchern festgehalten und als Taschenbücher veröffentlicht – als Einladung mitzulesen, mitzugehen und vielleicht den eigenen ersten Schritt vor die Haustür zu setzen.
