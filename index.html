@@ -3,40 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monika Hauer – Mein Weg</title>
+    <title>Monika Noja Hauer – Pilgerwege & Tagebücher</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        serif: ['Georgia', 'serif'],
-                        sans: ['Helvetica', 'Arial', 'sans-serif']
+                        serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
                     },
                     colors: {
-                        beige: '#f5f5dc',
-                        green: '#5a7d5a',
-                        earth: '#8b7355'
+                        sand: '#F5F1E8',
+                        cream: '#FDFCF8',
+                        olive: '#6B7C5C',
+                        'olive-dark': '#5A6B4D',
+                        earth: '#8B7355',
+                        stone: '#2C2C2C',
+                        warmgray: '#6B6560'
                     }
                 }
             }
         }
     </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body class="bg-beige text-gray-800 font-sans">
+<body class="bg-cream text-stone font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-cream/90 backdrop-blur-sm border-b border-stone/10 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="font-serif text-xl text-stone tracking-wide">Monika Noja Hauer</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#ueber-die-autorin" class="text-warmgray hover:text-olive transition-colors duration-200 text-sm tracking-wide uppercase">Über die Autorin</a>
+                    <a href="#buecher" class="text-warmgray hover:text-olive transition-colors duration-200 text-sm tracking-wide uppercase">Bücher</a>
+                    <a href="#galerie" class="text-warmgray hover:text-olive transition-colors duration-200 text-sm tracking-wide uppercase">Galerie</a>
+                    <a href="#kontakt" class="text-warmgray hover:text-olive transition-colors duration-200 text-sm tracking-wide uppercase">Kontakt</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-warmgray hover:text-olive focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-stone/10">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#ueber-die-autorin" class="block px-3 py-2 text-warmgray hover:text-olive hover:bg-sand/50 rounded-md text-base">Über die Autorin</a>
+                <a href="#buecher" class="block px-3 py-2 text-warmgray hover:text-olive hover:bg-sand/50 rounded-md text-base">Bücher</a>
+                <a href="#galerie" class="block px-3 py-2 text-warmgray hover:text-olive hover:bg-sand/50 rounded-md text-base">Galerie</a>
+                <a href="#kontakt" class="block px-3 py-2 text-warmgray hover:text-olive hover:bg-sand/50 rounded-md text-base">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div id="hero-bg" class="absolute inset-0 z-0"></div>
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-4xl md:text-6xl font-serif text-white mb-4" data-aos="fade-up">Mein Weg – Von Wien nach Santiago & weiter</h1>
-            <p class="text-xl md:text-2xl text-white mb-8" data-aos="fade-up" data-aos-delay="200">Pilgerin. Autorin.</p>
-            <a href="#tagebuch" class="inline-block bg-green text-white px-6 py-3 rounded hover:bg-earth transition" data-aos="fade-up" data-aos-delay="400">Zu den Büchern</a>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-stone">
+        <div class="absolute inset-0 z-0">
+            <img src="http://static.photos/travel/1200x800/42" alt="Pilgerweg Landschaft" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-b from-stone/40 via-stone/20 to-stone/60"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <p class="text-sand/90 text-sm md:text-base tracking-[0.3em] uppercase mb-6 font-sans font-light">Monika Noja Hauer</p>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-cream mb-6 leading-tight">Pilgerwege.<br>Tagebücher.<br>Geschichten des Unterwegsseins.</h1>
+            <p class="text-lg md:text-xl text-sand/90 mb-12 font-sans font-light max-w-2xl mx-auto">Persönliche Pilgertagebücher von Wien bis Süditalien</p>
+            <a href="#buecher" class="inline-block bg-olive text-cream px-8 py-4 text-sm tracking-widest uppercase hover:bg-olive-dark transition-colors duration-300 rounded-sm">Zu den Büchern</a>
         </div>
     </section>
 
