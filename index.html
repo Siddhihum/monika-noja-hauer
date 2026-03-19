@@ -597,11 +597,12 @@
             <p class="text-warmgray leading-relaxed mb-4 font-light" data-aos="fade-up">
                 Für Fragen, Rückmeldungen oder Anfragen freue ich mich über eine Nachricht.
             </p>
-            <p class="mb-3" data-aos="fade-up" data-aos-delay="50">
-                <a href="mailto:monika.hauer.noja@gmail.com" class="text-stone font-serif text-base sm:text-lg hover:text-olive transition-colors duration-200 break-words">
-                    monika.hauer.noja@gmail.com
+            <p class="mb-1" data-aos="fade-up" data-aos-delay="50">
+                <a id="contact-email" href="mailto:kontakt@monika-noja-hauer.at" class="text-stone font-serif text-base sm:text-lg hover:text-olive transition-colors duration-200 break-words cursor-pointer">
+                    kontakt@monika-noja-hauer.at
                 </a>
             </p>
+            <p id="contact-email-feedback" class="text-xs text-olive/80 font-light tracking-wide opacity-0 transition-opacity duration-200" aria-live="polite"></p>
             <a href="#" class="inline-flex items-center justify-center mt-3 text-warmgray/80 hover:text-olive transition-colors duration-200" data-aos="fade-up" data-aos-delay="100" aria-label="Instagram">
                 <img src="images/Instagram.png" alt="Instagram" class="w-5 h-5 opacity-80 hover:opacity-100 transition-opacity duration-200" />
             </a>
@@ -620,6 +621,48 @@
     </footer>
 
     <script>
+        (function () {
+            const emailLink = document.getElementById('contact-email');
+            const feedback = document.getElementById('contact-email-feedback');
+            if (emailLink && feedback) {
+                function showFeedback(message) {
+                    feedback.textContent = message;
+                    feedback.classList.remove('opacity-0');
+                    clearTimeout(showFeedback._timeoutId);
+                    showFeedback._timeoutId = window.setTimeout(function () {
+                        feedback.classList.add('opacity-0');
+                    }, 2500);
+                }
+
+                emailLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const address = emailLink.textContent.trim();
+
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(address)
+                            .then(function () {
+                                showFeedback('E-Mailadresse in Zwischenablage kopiert');
+                            })
+                            .catch(function () {
+                                showFeedback('E-Mailadresse konnte nicht kopiert werden');
+                            });
+                    } else {
+                        const tempInput = document.createElement('input');
+                        tempInput.value = address;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        try {
+                            document.execCommand('copy');
+                            showFeedback('E-Mailadresse in Zwischenablage kopiert');
+                        } catch (e) {
+                            showFeedback('E-Mailadresse konnte nicht kopiert werden');
+                        }
+                        document.body.removeChild(tempInput);
+                    }
+                });
+            }
+        })();
+
         AOS.init();
         feather.replace();
         VANTA.GLOBE({
