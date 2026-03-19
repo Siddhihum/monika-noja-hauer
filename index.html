@@ -66,6 +66,26 @@
             #navbar a {
                 word-break: keep-all;
             }
+
+            /* Verfeinertes Mobile-Menü */
+            #mobile-menu {
+                background: rgba(253, 252, 248, 0.98);
+                border-top: 1px solid rgba(44, 44, 44, 0.06);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            }
+
+            #mobile-menu > div {
+                padding-top: 0.75rem;
+                padding-bottom: 0.9rem;
+            }
+
+            #mobile-menu a {
+                font-size: 0.9rem;
+                line-height: 1.55;
+                padding-top: 0.55rem;
+                padding-bottom: 0.55rem;
+                border-radius: 0.35rem;
+            }
         }
     </style>
 </head>
@@ -405,6 +425,16 @@
             // Schließe das Menü beim Resize auf Desktop-Breite
             window.addEventListener('resize', function () {
                 if (window.innerWidth >= 768) {
+                    closeMenu();
+                }
+            });
+
+            // Schließe das Menü, wenn außerhalb des Menüs/Navigationsbereichs geklickt wird
+            document.addEventListener('click', function (event) {
+                if (menu.classList.contains('hidden')) return;
+                if (!nav) return;
+                const target = event.target;
+                if (!nav.contains(target)) {
                     closeMenu();
                 }
             });
