@@ -36,7 +36,7 @@
             /* Hero: angenehm lesbar auf sehr kleinen Screens */
             #hero-section {
                 min-height: 80vh;
-                padding-top: 6.5rem;
+                padding-top: 6.25rem;
                 padding-bottom: 3rem;
             }
 
@@ -60,7 +60,35 @@
 
             /* Navigation: etwas kompakter auf Mobile */
             #navbar .h-20 {
-                height: 4.25rem;
+                height: 4rem;
+            }
+
+            /* Navbar: ruhiger / weniger schwer */
+            #navbar .max-w-6xl {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+
+            #navbar .flex-shrink-0 {
+                display: flex;
+                align-items: center;
+            }
+
+            #navbar .flex-shrink-0 > a {
+                font-size: 1.05rem;
+                line-height: 1.2;
+                letter-spacing: 0.02em;
+            }
+
+            #navbar #mobile-menu-btn {
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+            }
+
+            #navbar #mobile-menu-btn svg {
+                height: 1.35rem;
+                width: 1.35rem;
+                opacity: 0.9;
             }
 
             #navbar a {
