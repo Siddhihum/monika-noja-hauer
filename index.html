@@ -35,7 +35,7 @@
         @media (max-width: 640px) {
             /* Hero: angenehm lesbar auf sehr kleinen Screens */
             #hero-section {
-                min-height: 80vh;
+                min-height: calc(80vh + 2cm);
                 padding-top: 6.25rem;
                 padding-bottom: 3rem;
             }
@@ -160,7 +160,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero-section" class="relative h-screen flex items-start justify-center overflow-hidden bg-stone pt-56 md:pt-80">
+    <section id="hero-section" class="relative min-h-[calc(100vh+2cm)] flex items-start justify-center overflow-hidden bg-stone pt-56 md:pt-80">
         <div class="absolute inset-0 z-0">
             <picture>
                 <source media="(max-width: 640px)" type="image/webp" srcset="images/headermobile.webp">
@@ -177,8 +177,8 @@
         </div>
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-28 md:mt-0">
             <p class="text-sand/90 text-sm md:text-base tracking-[0.3em] uppercase mb-6 font-sans font-light">Monika Noja Hauer</p>
-            <h1 id="hero-heading" class="text-3xl md:text-6xl lg:text-7xl font-serif text-cream mb-6 leading-tight">Allein zu Fuß durch Europa</h1>
-            <p id="hero-subtitle" class="text-base md:text-xl text-sand/90 mb-12 font-sans font-light max-w-2xl mx-auto">Persönliche Pilgertagebücher über lange Wege, Landschaften, Begegnungen und das Weitergehen.</p>
+            <h1 id="hero-heading" class="text-3xl md:text-6xl lg:text-7xl font-serif text-cream mb-6 leading-tight">Ein Rucksack<br>ein Zelt<br>und viele Wege</h1>
+            <p id="hero-subtitle" class="text-base md:text-xl text-sand/90 mb-12 font-sans font-light max-w-2xl mx-auto">Persönliche Pilgertagebücher<br>vom Unterwegssein in Europa</p>
             <a id="hero-cta" href="#buecher" class="inline-block bg-olive text-cream px-8 py-4 text-sm tracking-widest uppercase hover:bg-olive-dark transition-colors duration-300 rounded-sm">Zu den Büchern</a>
         </div>
     </section>
